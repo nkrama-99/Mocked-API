@@ -8,13 +8,13 @@
  *       properties:
  *         food:
  *           type: string
- *           example: d392a495-3f4c-4660-a896-dce057afbbd4
+ *           example: 'Abiyuch'
  *         category:
  *           type: string
- *           example: 'Abiyuch'
+ *           example: 'fruits'
  *         servings:
  *           type: string
- *           example: 'fruits'
+ *           example: '69.0 kCal'
  *         calories:
  *           type: string
  *           example: '100 g'
