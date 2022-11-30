@@ -6,21 +6,18 @@ import FoodEnum from '../consts/FoodEnum';
 module.exports = function (app: core.Express) {
     /**
      * @openapi
-     * "/food":
+     * "/food/nutrition":
      *   get:
      *     tags:
      *       - Food
-     *     summary: Obtain an array of food with their nutrients (by default)
+     *     summary: Obtain an array of food with their nutrients
      *     responses:
      *       '200':
-     *         description: An array of food and their nutrients
+     *         description: OK
      *         schema:
-     *           type: array
-     *           items:
-     *             type: object
-     *             example: ['orange\fruit\144\1.10 mg\24.32 g']
+     *           $ref: '#/definitions/MockFoodNutrition'
      */
-    app.get('/food', (req: Request, res: Response) => {
+    app.get('/food/nutrition', (req: Request, res: Response) => {
         let dummyQty = 10;
         const food = getRandomFoods(FoodEnum.Fruits, dummyQty);
         res.json(food);

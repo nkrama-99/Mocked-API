@@ -1,7 +1,7 @@
 /**
  * @openapi
  * definitions:
- *   MockUsers:
+ *   MockFoodNutrition:
  *     type: array
  *     items:
  *       type: object
@@ -11,37 +11,37 @@
  *           example: d392a495-3f4c-4660-a896-dce057afbbd4
  *         category:
  *           type: string
- *           example: Aaron Rackley
+ *           example: 'Abiyuch'
  *         servings:
  *           type: string
- *           example: john.doe@example.com
+ *           example: 'fruits'
  *         calories:
  *           type: string
- *           example: https://cloudflare-ipfs.com/ipfs/Qmd  3W5hgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/597.jpg
+ *           example: '100 g'
  *         saturatedFat:
  *           type: string
- *           example: password
+ *           example: '0.068 g'
  *         transFat:
  *           type: string
- *           example: '1984-05-21T00:02:11.497Z'
+ *           example: '10 mg'
  *         cholesterol:
  *           type: string
- *           example: '2022-09-22T16:03:17.885Z'
+ *           example: '0.0 mg'
  *         sodium:
  *           type: string
- *           example: '2022-09-22T16:03:17.885Z'
+ *           example: '20.0 mg'
  *         carbohydrate:
  *           type: string
- *           example: '2022-09-22T16:03:17.885Z'
+ *           example: '17.6 g'
  *         sugars:
  *           type: string
- *           example: '2022-09-22T16:03:17.885Z'
+ *           example: '4.5 g'
  *         fibre:
  *           type: string
- *           example: '2022-09-22T16:03:17.885Z'
+ *           example: '0.3 g'
  *         protein:
  *           type: string
- *           example: '2022-09-22T16:03:17.885Z'
+ *           example: '0.4 g'
  */
 
 type FoodNutrition = {
