@@ -4261,4 +4261,6 @@ const fruitsList = [ {'Food': 'Abiyuch, raw',
 'Carbohydrate': '7.55 g',
 'Sugars': '6.2 g',
 'Fibre': '0.4 g',
-'Protein': '0.61 g'}]
+'Protein': '0.61 g'}];
+
+export default fruitsList;
