@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import * as core from 'express-serve-static-core';
-import getRandomFood from '../utils/getRandomFood';
+import getRandomFoods from '../utils/getRandomFoods';
+import FoodEnum from '../consts/FoodEnum';
 
 module.exports = function (app: core.Express) {
     /**
@@ -20,7 +21,8 @@ module.exports = function (app: core.Express) {
      *             example: ['orange\fruit\144\1.10 mg\24.32 g']
      */
     app.get('/food', (req: Request, res: Response) => {
-        const food = getRandomFood();
+        let dummyQty = 10;
+        const food = getRandomFoods(FoodEnum.Fruits, dummyQty);
         res.json(food);
     });
 };
