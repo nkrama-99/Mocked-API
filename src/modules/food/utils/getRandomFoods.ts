@@ -1,7 +1,8 @@
 import fruitsList from '../data/fruits';
 
-const getRandomFoods = () => {
-    console.log(fruitsList);
+const getRandomFoods = (FoodType, qty) => {
+    console.log(FoodType);
+    console.log(qty);
 };
 
 export default getRandomFoods;
