@@ -1,26 +1,27 @@
+import beverages from '../data/beverages';
+import dairy from '../data/dairy';
 import fruits from '../data/fruits';
-
+import grains from '../data/grains';
+import proteins from '../data/proteins';
+import vegetables from '../data/vegetables';
 import FoodNutrition from '../consts/FoodNutrition';
 import FoodEnum from '../consts/FoodEnum';
 import { getRandomSubArray } from '../../../utils/arrays';
 
 const getRandomFoods = (FoodType, qty) => {
-    console.log("Food Type:" + FoodType);
-    console.log(qty);
-
     switch(FoodType) {
+        case(FoodEnum.Beverages):
+            return(getRandomSubArray(beverages, qty));
+        case(FoodEnum.Dairy):
+            return(getRandomSubArray(dairy, qty));
         case(FoodEnum.Fruits):
             return(getRandomSubArray(fruits, qty));
-        case(FoodEnum.Beverages):
-            return(getRandomSubArray(fruits, qty));
-        case(FoodEnum.Dairy):
-            return(getRandomSubArray(fruits, qty));
         case(FoodEnum.Grains):
-            return(getRandomSubArray(fruits, qty));
+            return(getRandomSubArray(grains, qty));
         case(FoodEnum.Protein):
-            return(getRandomSubArray(fruits, qty));
+            return(getRandomSubArray(proteins, qty));
         case(FoodEnum.Vegetables):
-            return(getRandomSubArray(fruits, qty));
+            return(getRandomSubArray(vegetables, qty));
     }
 };
 
