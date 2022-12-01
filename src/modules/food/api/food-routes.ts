@@ -99,9 +99,10 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockFoodNutrition'
      */
-    app.get('/food/nutrition/fruits/:qty', (req: Request, res: Response) => {
+    app.get('/food/nutrition/fruits/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const food = getRandomFoods(FoodEnum.Fruits, qty);
+        console.log(food);
         res.json(food);
     });
 

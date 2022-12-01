@@ -1,4 +1,4 @@
-const fruitsList = [
+const fruits = [
     {
         Food: 'Abiyuch, raw',
         Category: 'Fruits',
@@ -4921,4 +4921,4 @@ const fruitsList = [
     },
 ];
 
-export default fruitsList;
+export default fruits;

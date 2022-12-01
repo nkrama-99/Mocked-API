@@ -1,45 +1,27 @@
-import fruitsList from '../data/fruits';
+import fruits from '../data/fruits';
+
 import FoodNutrition from '../consts/FoodNutrition';
+import FoodEnum from '../consts/FoodEnum';
+import { getRandomSubArray } from '../../../utils/arrays';
 
 const getRandomFoods = (FoodType, qty) => {
-    console.log(FoodType);
+    console.log("Food Type:" + FoodType);
     console.log(qty);
 
-    // returning test data
-    const result: FoodNutrition[] = [];
-    result.push({
-        food: 'apple',
-        category: 'fruits',
-        servings: '100 g',
-        calories: '2.3 mg',
-        fat: '2.3 mg',
-        saturatedFat: '2.3 mg',
-        transFat: '2.3 mg',
-        cholesterol: '2.3 mg',
-        sodium: '2.3 mg',
-        carbohydrate: '2.3 mg',
-        sugars: '2.3 mg',
-        fibre: '2.3 mg',
-        protein: '2.3 mg'
-    });
-
-    result.push({
-        food: 'banana',
-        category: 'fruits',
-        servings: '100 g',
-        calories: '2.3 mg',
-        fat: '2.3 mg',
-        saturatedFat: '2.3 mg',
-        transFat: '2.3 mg',
-        cholesterol: '2.3 mg',
-        sodium: '2.3 mg',
-        carbohydrate: '2.3 mg',
-        sugars: '2.3 mg',
-        fibre: '2.3 mg',
-        protein: '2.3 mg'
-    });
-
-    return result;
+    switch(FoodType) {
+        case(FoodEnum.Fruits):
+            return(getRandomSubArray(fruits, qty));
+        case(FoodEnum.Beverages):
+            return(getRandomSubArray(fruits, qty));
+        case(FoodEnum.Dairy):
+            return(getRandomSubArray(fruits, qty));
+        case(FoodEnum.Grains):
+            return(getRandomSubArray(fruits, qty));
+        case(FoodEnum.Protein):
+            return(getRandomSubArray(fruits, qty));
+        case(FoodEnum.Vegetables):
+            return(getRandomSubArray(fruits, qty));
+    }
 };
 
 export default getRandomFoods;
