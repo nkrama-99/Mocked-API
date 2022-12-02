@@ -77,7 +77,6 @@ module.exports = function (app: core.Express) {
     app.get('/food/nutrition/fruits/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const food = getRandomFoods(FoodEnum.Fruits, qty);
-        console.log(food);
         res.json(food);
     });
 
