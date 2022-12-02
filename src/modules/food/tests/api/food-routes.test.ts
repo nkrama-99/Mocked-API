@@ -128,3 +128,35 @@ describe('food/nutrition/grains api endpoints', () => {
         });
     });
 });
+
+describe('food/nutrition/protein api endpoints', () => {
+    describe('GET /food/nutrition/protein', () => {
+        it('should return a user', async () => {
+            const response = await request(app).get(`/food/nutrition/protein`);
+
+            const food = response.body[0];
+
+            expect(food).toHaveProperty('Food');
+            expect(food).toHaveProperty('Category');
+            expect(food).toHaveProperty('Servings');
+            expect(food).toHaveProperty('Calories');
+            expect(food).toHaveProperty('Saturated Fat');
+            expect(food).toHaveProperty('Trans Fat');
+            expect(food).toHaveProperty('Cholesterol');
+            expect(food).toHaveProperty('Sodium');
+            expect(food).toHaveProperty('Carbohydrate');
+            expect(food).toHaveProperty('Sugars');
+            expect(food).toHaveProperty('Fibre');
+            expect(food).toHaveProperty('Protein');
+        });
+    });
+
+    describe('GET /food/nutrition/protein/qty', () => {
+        const qty = 5;
+
+        it('should return protein with the given quantity of protein', async () => {
+            const response = await request(app).get(`/food/nutrition/protein/${qty}`);
+            expect(response.body.length).toEqual(qty);
+        });
+    });
+});
