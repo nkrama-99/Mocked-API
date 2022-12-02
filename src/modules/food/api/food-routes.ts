@@ -15,7 +15,7 @@ module.exports = function (app: core.Express) {
      *     parameters:
      *     - in: path
      *       name: qty
-     *       description: The amount of food you require
+     *       description: The total number of food with their nutrients you require
      *       type: string
      *       default: 10
      *     responses:
@@ -24,7 +24,7 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockFoodNutrition'
      */
-    app.get('/food/nutrition/:qty', (req: Request, res: Response) => {
+    app.get('/food/nutrition/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const food = getRandomFoods(FoodEnum.All, qty);
         res.json(food);
@@ -36,11 +36,11 @@ module.exports = function (app: core.Express) {
      *   get:
      *     tags:
      *       - Food
-     *     summary: Obtain an array of food with their nutrients
+     *     summary: Obtain an array of dairy with their nutrients
      *     parameters:
      *     - in: path
      *       name: qty
-     *       description: The amount of food you require
+     *       description: The total number of dairy with their nutrients you require
      *       type: string
      *       default: 10
      *     responses:
@@ -49,7 +49,7 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockFoodNutrition'
      */
-    app.get('/food/nutrition/dairy/:qty', (req: Request, res: Response) => {
+    app.get('/food/nutrition/dairy/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const food = getRandomFoods(FoodEnum.Dairy, qty);
         res.json(food);
@@ -61,11 +61,11 @@ module.exports = function (app: core.Express) {
      *   get:
      *     tags:
      *       - Food
-     *     summary: Obtain an array of food with their nutrients
+     *     summary: Obtain an array of vegetables with their nutrients
      *     parameters:
      *     - in: path
      *       name: qty
-     *       description: The amount of food you require
+     *       description: The total number of vegetables with their nutrients you require
      *       type: string
      *       default: 10
      *     responses:
@@ -74,7 +74,7 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockFoodNutrition'
      */
-    app.get('/food/nutrition/vegetables/:qty', (req: Request, res: Response) => {
+    app.get('/food/nutrition/vegetables/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const food = getRandomFoods(FoodEnum.Vegetables, qty);
         res.json(food);
@@ -86,11 +86,11 @@ module.exports = function (app: core.Express) {
      *   get:
      *     tags:
      *       - Food
-     *     summary: Obtain an array of food with their nutrients
+     *     summary: Obtain an array of fruits with their nutrients
      *     parameters:
      *     - in: path
      *       name: qty
-     *       description: The amount of food you require
+     *       description: The total number of fruits with their nutrients you require
      *       type: string
      *       default: 10
      *     responses:
@@ -116,7 +116,7 @@ module.exports = function (app: core.Express) {
      *     parameters:
      *     - in: path
      *       name: qty
-     *       description: The amount of food you require
+     *       description: The total number of food with their nutrients you require
      *       type: string
      *       default: 10
      *     responses:
@@ -125,7 +125,7 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockFoodNutrition'
      */
-    app.get('/food/nutrition/grains/:qty', (req: Request, res: Response) => {
+    app.get('/food/nutrition/grains/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const food = getRandomFoods(FoodEnum.Grains, qty);
         res.json(food);
@@ -137,11 +137,11 @@ module.exports = function (app: core.Express) {
      *   get:
      *     tags:
      *       - Food
-     *     summary: Obtain an array of food with their nutrients
+     *     summary: Obtain an array of protein with their nutrients
      *     parameters:
      *     - in: path
      *       name: qty
-     *       description: The amount of food you require
+     *       description: The total number of protein with their nutrients you require
      *       type: string
      *       default: 10
      *     responses:
@@ -150,7 +150,7 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockFoodNutrition'
      */
-    app.get('/food/nutrition/protein/:qty', (req: Request, res: Response) => {
+    app.get('/food/nutrition/protein/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const food = getRandomFoods(FoodEnum.Protein, qty);
         res.json(food);
@@ -162,11 +162,11 @@ module.exports = function (app: core.Express) {
      *   get:
      *     tags:
      *       - Food
-     *     summary: Obtain an array of food with their nutrients
+     *     summary: Obtain an array of beverages with their nutrients
      *     parameters:
      *     - in: path
      *       name: qty
-     *       description: The amount of food you require
+     *       description: The total number of beverages with their nutrients you require
      *       type: string
      *       default: 10
      *     responses:
@@ -175,7 +175,7 @@ module.exports = function (app: core.Express) {
      *         schema:
      *           $ref: '#/definitions/MockFoodNutrition'
      */
-    app.get('/food/nutrition/beverages/:qty', (req: Request, res: Response) => {
+    app.get('/food/nutrition/beverages/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const food = getRandomFoods(FoodEnum.Beverages, qty);
         res.json(food);
