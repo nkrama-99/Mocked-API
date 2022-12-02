@@ -24,3 +24,11 @@ describe('get random Vegetables', () => {
         expect(res.length).toBe(amount);
     });
 });
+
+describe('get random Grains', () => {
+    it('should return a list of random Grains items', () => {
+        const amount = 4;
+        const res = getRandomFoods(FoodEnum.Grains, 4);
+        expect(res.length).toBe(amount);
+    });
+});
