@@ -32,3 +32,11 @@ describe('get random Grains', () => {
         expect(res.length).toBe(amount);
     });
 });
+
+describe('get random Protein', () => {
+    it('should return a list of random Protein items', () => {
+        const amount = 4;
+        const res = getRandomFoods(FoodEnum.Protein, 4);
+        expect(res.length).toBe(amount);
+    });
+});
