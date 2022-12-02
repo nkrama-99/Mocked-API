@@ -6,7 +6,7 @@ describe('## food/nutrition api endpoints', () => {
         it('should return a user', async () => {
             const qty = 1;
             const response = await request(app).get(`/food/nutrition/`);
-
+            
             const food = response.body[0];
 
             expect(food).toHaveProperty('food');
