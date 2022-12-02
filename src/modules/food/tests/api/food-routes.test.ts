@@ -2,25 +2,25 @@ import app from '../../../../../app';
 let request = require('supertest');
 
 describe('## food/nutrition api endpoints', () => {
-    describe('GET /food/nutrition/', () => {
+    describe('GET /food/nutrition/fruits', () => {
         it('should return a user', async () => {
             const qty = 1;
-            const response = await request(app).get(`/food/nutrition/`);
+            const response = await request(app).get(`/food/nutrition/fruits`);
 
             const food = response.body[0];
 
-            expect(food).toHaveProperty('food');
-            expect(food).toHaveProperty('category');
-            expect(food).toHaveProperty('servings');
-            expect(food).toHaveProperty('calories');
-            expect(food).toHaveProperty('saturatedFat');
-            expect(food).toHaveProperty('transFat');
-            expect(food).toHaveProperty('cholesterol');
-            expect(food).toHaveProperty('sodium');
-            expect(food).toHaveProperty('carbohydrate');
-            expect(food).toHaveProperty('sugars');
-            expect(food).toHaveProperty('fibre');
-            expect(food).toHaveProperty('protein');
+            expect(food).toHaveProperty('Food');
+            expect(food).toHaveProperty('Category');
+            expect(food).toHaveProperty('Servings');
+            expect(food).toHaveProperty('Calories');
+            expect(food).toHaveProperty('SaturatedFat');
+            expect(food).toHaveProperty('TransFat');
+            expect(food).toHaveProperty('Cholesterol');
+            expect(food).toHaveProperty('Sodium');
+            expect(food).toHaveProperty('Carbohydrate');
+            expect(food).toHaveProperty('Sugars');
+            expect(food).toHaveProperty('Fibre');
+            expect(food).toHaveProperty('Protein');
         });
     });
 
