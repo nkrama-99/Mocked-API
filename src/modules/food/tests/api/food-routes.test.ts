@@ -4,7 +4,6 @@ let request = require('supertest');
 describe('## food/nutrition api endpoints', () => {
     describe('GET /food/nutrition/fruits', () => {
         it('should return a user', async () => {
-            const qty = 1;
             const response = await request(app).get(`/food/nutrition/fruits`);
 
             const food = response.body[0];
@@ -24,12 +23,12 @@ describe('## food/nutrition api endpoints', () => {
         });
     });
 
-    // describe('GET /courses/qty', () => {
-    //     const qty = 2;
+    describe('GET /food/nutrition/fruits/qty', () => {
+        const qty = 2;
 
-    //     it('should return courses with the given quantity of courses', async () => {
-    //         const response = await request(app).get(`/courses/${qty}`);
-    //         expect(response.body.length).toEqual(qty);
-    //     });
-    // });
+        it('should return courses with the given quantity of courses', async () => {
+            const response = await request(app).get(`/food/nutrition/fruits/${qty}`);
+            expect(response.body.length).toEqual(qty);
+        });
+    });
 });
