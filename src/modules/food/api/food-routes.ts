@@ -7,31 +7,6 @@ import { getQtyFromRequest } from '../../../utils/route-utils';
 module.exports = function (app: core.Express) {
     /**
      * @openapi
-     * "/food/nutrition/{qty}":
-     *   get:
-     *     tags:
-     *       - Food
-     *     summary: Obtain an array of food with their nutrients
-     *     parameters:
-     *     - in: path
-     *       name: qty
-     *       description: The total number of food with their nutrients you require
-     *       type: string
-     *       default: 10
-     *     responses:
-     *       '200':
-     *         description: OK
-     *         schema:
-     *           $ref: '#/definitions/MockFoodNutrition'
-     */
-    app.get('/food/nutrition/:qty?', (req: Request, res: Response) => {
-        const qty = getQtyFromRequest(req);
-        const food = getRandomFoods(FoodEnum.All, qty);
-        res.json(food);
-    });
-
-    /**
-     * @openapi
      * "/food/nutrition/dairy/{qty}":
      *   get:
      *     tags:
@@ -178,6 +153,31 @@ module.exports = function (app: core.Express) {
     app.get('/food/nutrition/beverages/:qty?', (req: Request, res: Response) => {
         const qty = getQtyFromRequest(req);
         const food = getRandomFoods(FoodEnum.Beverages, qty);
+        res.json(food);
+    });
+
+    /**
+     * @openapi
+     * "/food/nutrition/{qty}":
+     *   get:
+     *     tags:
+     *       - Food
+     *     summary: Obtain an array of food with their nutrients
+     *     parameters:
+     *     - in: path
+     *       name: qty
+     *       description: The total number of food with their nutrients you require
+     *       type: string
+     *       default: 10
+     *     responses:
+     *       '200':
+     *         description: OK
+     *         schema:
+     *           $ref: '#/definitions/MockFoodNutrition'
+     */
+    app.get('/food/nutrition/:qty?', (req: Request, res: Response) => {
+        const qty = getQtyFromRequest(req);
+        const food = getRandomFoods(FoodEnum.All, qty);
         res.json(food);
     });
 };
