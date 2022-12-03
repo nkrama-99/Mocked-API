@@ -10,8 +10,6 @@ Original file is located at
 import numpy as np
 import pandas as pd
 
-"""# Food nutrient table preprocessing"""
-
 # read csv files as df
 df_foodGroup = pd.read_csv("FOOD_GROUP.csv",encoding='latin-1')
 df_foodName = pd.read_csv("FOOD_NAME.csv",encoding='latin-1')
