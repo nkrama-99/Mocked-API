@@ -32,8 +32,7 @@ df_combined = df_combined.sort_values("FoodDescription").reset_index(drop=True)
 """
 *   **Total # of food sources**: 5689
 *   **Total # of food groups**: 23
-*   **Total # of available nutrients**: 10 (protein, fat, saturated fat, trans fat carbohydrate, energy, sugars, sodium, cholesterol, fibre) 
-
+*   **Total # of available nutrients**: 10 (protein, fat, saturated fat, trans fat carbohydrate, energy, sugars, sodium, cholesterol, fibre)
 """
 
 df_combined["NutrientAmt"] = df_combined["NutrientValue"].astype(str) + " " + df_combined["NutrientUnit"]
