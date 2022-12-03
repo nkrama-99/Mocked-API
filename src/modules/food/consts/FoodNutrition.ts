@@ -45,19 +45,19 @@
  */
 
 type FoodNutrition = {
-    food: string,
-    category: string,
-    servings: string,
-    calories: string,
-    fat: string,
-    saturatedFat: string,
-    transFat: string,
-    cholesterol: string,
-    sodium: string,
-    carbohydrate: string,
-    sugars: string,
-    fibre: string,
-    protein: string,
+    food: string;
+    category: string;
+    servings: string;
+    calories: string;
+    fat: string;
+    saturatedFat: string;
+    transFat: string;
+    cholesterol: string;
+    sodium: string;
+    carbohydrate: string;
+    sugars: string;
+    fibre: string;
+    protein: string;
 };
 
 export default FoodNutrition;
