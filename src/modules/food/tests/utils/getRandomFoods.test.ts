@@ -40,3 +40,11 @@ describe('get random Protein', () => {
         expect(res.length).toBe(amount);
     });
 });
+
+describe('get random Beverages', () => {
+    it('should return a list of random Beverages items', () => {
+        const amount = 4;
+        const res = getRandomFoods(FoodEnum.Beverages, 4);
+        expect(res.length).toBe(amount);
+    });
+});
