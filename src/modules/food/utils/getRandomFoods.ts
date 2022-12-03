@@ -4,7 +4,6 @@ import fruits from '../data/fruits';
 import grains from '../data/grains';
 import proteins from '../data/proteins';
 import vegetables from '../data/vegetables';
-import FoodNutrition from '../consts/FoodNutrition';
 import FoodEnum from '../consts/FoodEnum';
 import { getRandomSubArray } from '../../../utils/arrays';
 

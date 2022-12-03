@@ -60,4 +60,4 @@ type FoodNutrition = {
     protein: string;
 };
 
-export default FoodNutrition;
+export type { FoodNutrition };
