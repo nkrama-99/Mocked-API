@@ -44,8 +44,8 @@ describe('food/nutrition/dairy api endpoints', () => {
             expect(food).toHaveProperty('Category');
             expect(food).toHaveProperty('Servings');
             expect(food).toHaveProperty('Calories');
-            expect(food).toHaveProperty('Saturated Fat');
-            expect(food).toHaveProperty('Trans Fat');
+            expect(food).toHaveProperty('SaturatedFat');
+            expect(food).toHaveProperty('TransFat');
             expect(food).toHaveProperty('Cholesterol');
             expect(food).toHaveProperty('Sodium');
             expect(food).toHaveProperty('Carbohydrate');
@@ -76,8 +76,8 @@ describe('food/nutrition/vegetables api endpoints', () => {
             expect(food).toHaveProperty('Category');
             expect(food).toHaveProperty('Servings');
             expect(food).toHaveProperty('Calories');
-            expect(food).toHaveProperty('Saturated Fat');
-            expect(food).toHaveProperty('Trans Fat');
+            expect(food).toHaveProperty('SaturatedFat');
+            expect(food).toHaveProperty('TransFat');
             expect(food).toHaveProperty('Cholesterol');
             expect(food).toHaveProperty('Sodium');
             expect(food).toHaveProperty('Carbohydrate');
@@ -108,8 +108,8 @@ describe('food/nutrition/grains api endpoints', () => {
             expect(food).toHaveProperty('Category');
             expect(food).toHaveProperty('Servings');
             expect(food).toHaveProperty('Calories');
-            expect(food).toHaveProperty('Saturated Fat');
-            expect(food).toHaveProperty('Trans Fat');
+            expect(food).toHaveProperty('SaturatedFat');
+            expect(food).toHaveProperty('TransFat');
             expect(food).toHaveProperty('Cholesterol');
             expect(food).toHaveProperty('Sodium');
             expect(food).toHaveProperty('Carbohydrate');
@@ -140,8 +140,8 @@ describe('food/nutrition/protein api endpoints', () => {
             expect(food).toHaveProperty('Category');
             expect(food).toHaveProperty('Servings');
             expect(food).toHaveProperty('Calories');
-            expect(food).toHaveProperty('Saturated Fat');
-            expect(food).toHaveProperty('Trans Fat');
+            expect(food).toHaveProperty('SaturatedFat');
+            expect(food).toHaveProperty('TransFat');
             expect(food).toHaveProperty('Cholesterol');
             expect(food).toHaveProperty('Sodium');
             expect(food).toHaveProperty('Carbohydrate');
@@ -172,8 +172,8 @@ describe('food/nutrition/beverages api endpoints', () => {
             expect(food).toHaveProperty('Category');
             expect(food).toHaveProperty('Servings');
             expect(food).toHaveProperty('Calories');
-            expect(food).toHaveProperty('Saturated Fat');
-            expect(food).toHaveProperty('Trans Fat');
+            expect(food).toHaveProperty('SaturatedFat');
+            expect(food).toHaveProperty('TransFat');
             expect(food).toHaveProperty('Cholesterol');
             expect(food).toHaveProperty('Sodium');
             expect(food).toHaveProperty('Carbohydrate');
