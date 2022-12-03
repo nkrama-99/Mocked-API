@@ -10,6 +10,9 @@ import { getRandomSubArray } from '../../../utils/arrays';
 
 const getRandomFoods = (FoodType, qty) => {
     switch(FoodType) {
+        case(FoodEnum.All):
+            let allFoods = [].concat(beverages, dairy, fruits, grains, proteins, vegetables);
+            return(getRandomSubArray(allFoods, qty));
         case(FoodEnum.Beverages):
             return(getRandomSubArray(beverages, qty));
         case(FoodEnum.Dairy):
