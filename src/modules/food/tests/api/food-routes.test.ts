@@ -192,3 +192,35 @@ describe('food/nutrition/beverages api endpoints', () => {
         });
     });
 });
+
+describe('food/nutrition/ api endpoints', () => {
+    describe('GET /food/nutrition/', () => {
+        it('should return a user', async () => {
+            const response = await request(app).get(`/food/nutrition/`);
+
+            const food = response.body[0];
+
+            expect(food).toHaveProperty('Food');
+            expect(food).toHaveProperty('Category');
+            expect(food).toHaveProperty('Servings');
+            expect(food).toHaveProperty('Calories');
+            expect(food).toHaveProperty('SaturatedFat');
+            expect(food).toHaveProperty('TransFat');
+            expect(food).toHaveProperty('Cholesterol');
+            expect(food).toHaveProperty('Sodium');
+            expect(food).toHaveProperty('Carbohydrate');
+            expect(food).toHaveProperty('Sugars');
+            expect(food).toHaveProperty('Fibre');
+            expect(food).toHaveProperty('Protein');
+        });
+    });
+
+    describe('GET /food/nutrition/qty', () => {
+        const qty = 10;
+
+        it('should return various categories of food item with the given quantity of food items', async () => {
+            const response = await request(app).get(`/food/nutrition/${qty}`);
+            expect(response.body.length).toEqual(qty);
+        });
+    });
+});
