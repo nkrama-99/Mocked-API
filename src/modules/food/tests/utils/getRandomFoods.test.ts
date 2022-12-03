@@ -48,3 +48,11 @@ describe('get random Beverages', () => {
         expect(res.length).toBe(amount);
     });
 });
+
+describe('get random items for all food categories', () => {
+    it('should return a list of random food items', () => {
+        const amount = 4;
+        const res = getRandomFoods(FoodEnum.All, 4);
+        expect(res.length).toBe(amount);
+    });
+});
